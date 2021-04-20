@@ -1,9 +1,13 @@
+:root {
+  --bg-color: #e84545;
+}
+
 body {
   font-family: "Montserrat";
 }
 
 #title {
-  background-color: #ff4c68;
+  background-color: var(--bg-color);
   color: white;
 }
 
@@ -35,12 +39,12 @@ p {
 }
 
 .icon {
-  color: #ef8172;
+  color: #eb8242;
   margin-bottom: 1rem;
 }
 
 .icon:hover {
-  color: #ff4c68;
+  color: #5eaaa8;
 }
 
 /* navbar button */
@@ -60,7 +64,8 @@ p {
 
 .nav-link {
   font-family: "Montserrat";
-  font-weight: 300;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /* download button */
@@ -91,7 +96,7 @@ p {
 
 /* call to Action */
 #cta {
-  background-color: #ff4c68;
+  background-color: var(--bg-color);
   color: white;
   padding: 7% 15%;
   text-align: center;
@@ -103,8 +108,93 @@ p {
   text-align: center;
 }
 
-.social-icon {
-  margin: 20px 10px;
+.social-icon-f {
+  margin: 25px 20px;
+  color: blue;
+}
+.social-icon-t {
+  margin: 25px 20px;
+  color: lightskyblue;
+}
+.social-icon-i {
+  margin: 25px 20px;
+  color: palevioletred;
+}
+.social-icon-e {
+  margin: 25px 20px;
+  color: purple;
+}
+
+.copyright {
+  color: indigo;
+}
+
+/* Style the rainbow text element. */
+.rainbow-text {
+  /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    218deg,
+    #f5e4e5 16.666%,
+    #e9d4ce 16.666%,
+    #f1a48f 33.333%,
+    #f0bb92 33.333%,
+    #f0c5a3 50%,
+    #d3e597 50%,
+    #e7f7b5 66.666%,
+    #bccdf3 66.666%,
+    #becff3 83.333%,
+    #f8d9f4 83.333%
+  );
+
+  /* Set thee background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+  cursor: pointer;
+}
+
+/* Add animation on hover. */
+.rainbow-text:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
 }
 
 .cta-heading {
@@ -117,7 +207,7 @@ p {
 /* #testimonial section */
 #testimonials {
   text-align: center;
-  background-color: #ef8172;
+  background-color: #5f6769;
   color: white;
 }
 
@@ -133,7 +223,7 @@ p {
 
 /* Press section */
 #press {
-  background-color: #ef8172;
+  background-color: #5f6769;
   text-align: center;
   padding-bottom: 3rem;
 }
@@ -153,8 +243,8 @@ p {
   padding: 3% 2%;
 }
 
-@media (max-width:1028px) {
-  #title{
+@media (max-width: 1028px) {
+  #title {
     text-align: center;
   }
   .title-image {
